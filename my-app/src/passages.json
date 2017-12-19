@@ -1,0 +1,14 @@
+[
+    {
+        "passage": "<exclamation>! He said <adverb> as he jumped into his convertible <noun> and drove off with his <adjective> wife.",
+        "wordsNeeded": 4
+    },
+    {
+        "passage": "<name> was a <adjective> boy. I met him when he said his <adjective> sister <name> were taking a walk. I said, '<greeting>! I like your <noun>!' You just smiled and <verb-past-tense>.",
+        "wordsNeeded": 7
+    },
+    {
+        "passage": "This <holiday>, <name> planned to visit her <family-member> in <city>. Last year, she drove <number> miles in her <car-brand>. This year, she planned to take the <transportation>.",
+        "wordsNeeded": 7
+    }
+]
