@@ -7,7 +7,7 @@ import passages from './passages.json';
 
 class Form extends Component {
   render() {
-    const { order, handleButton, handleForm, handleInput } = this.props
+    const { order, handleForm, handleInput } = this.props
 
     return (
       <form onSubmit={handleForm}>
@@ -17,36 +17,27 @@ class Form extends Component {
             <p>{word}</p>
           </div>
         ))}
-        <div>
-          <button onClick={handleButton}>Madfy</button>
-        </div>
       </form>
     )
   }
 }
 
+
 class Story extends Component {
-  getWord = () => {
-    // this function is used ...? 
+  capitalize = str => {
+    return str.replace(/\w/, letter => letter.toUpperCase())
   }
 
-  // HERE!!!
-  // stuck here on rendering the full story with styling tags... 
+  // I gave up on adding styling tags to the substituted words 
   makeStory = (passage, words) => {
-    // makes a story! 
-    // returns a ( <div> </div> ) element 
-    // passage: [0] he said [1] as he jumped ... 
-    // words: [hello, hastily, ...] 
-    // story: '&lt;span className='libbed'&gt;hello$lt;/span&gt;! he said <span className='libbed'>hastily</span> as he jumped...'
-    let story = passage 
-    let pattern = /\[[^\]]*\]/ 
+    let story = passage
+    let pattern = /\[[^\]]*\]/
 
-    for(let i = 0; i < words.length; i++) {
-      story = story.replace(pattern, `&lt;span className='libbed'&gt;${words[i]}&lt;/span&gt;`)
+    for (let i = 0; i < words.length; i++) {
+      story = story.replace(pattern, words[i])
     }
 
-    console.log(story) 
-    return story
+    return this.capitalize(story)
   }
 
   render() {
@@ -55,7 +46,6 @@ class Story extends Component {
 
     return (
       <div>
-        <p>Story goes here</p>
         <p>{this.makeStory(passage, words)}</p>
       </div>
     )
@@ -65,7 +55,6 @@ class Story extends Component {
 class App extends Component {
   constructor() {
     super()
-    // this.passages = passages 
     this.state = {
       passage: '',
       wordsNeeded: 0,
@@ -111,18 +100,32 @@ class App extends Component {
   // prevents page reload when form is submitted 
   handleFormSubmit = event => {
     event.preventDefault()
-    // console.log('form submitted')
     this.setState({
       submitted: true
     })
   }
 
   // when user clicks 'Madify'
-  handleButtonClick = event => {
-    // console.log('button clicked')
-    this.setState({
-      submitted: true
-    })
+  handleSubmitButton = event => {
+    const { passage, wordsNeeded, order, words, story, submitted } = this.state 
+
+    const hasWords = words.filter(word => word)
+
+    if (hasWords.length === wordsNeeded) {
+      this.setState({
+        submitted: true
+      })
+    } else {
+      console.log(`only filled out ${hasWords.length} words out of ${wordsNeeded}`)
+    }
+  }
+
+  // HERE!! 
+  // working on randomly choosing another passage 
+  // and re-rendering the empty form 
+  // when user clicks 'Another one'
+  handleAnotherButton = event => {
+    // 
   }
 
   // tracks changes in form text input and adds to state 
@@ -139,16 +142,20 @@ class App extends Component {
   render() {
     const { passage, wordsNeeded, order, words, story, submitted } = this.state
 
-    // console.log(passages)
     console.log(this.state)
 
     return (
       <div>
         <h1>Madify</h1>
         <Form order={order}
-          handleButton={this.handleButtonClick}
           handleForm={this.handleFormSubmit}
           handleInput={this.handleInputChange} />
+
+        <div>
+          <button onClick={this.handleSubmitButton}>Madify</button>
+          <button onClick={this.handleAnotherButton}>Another one</button>
+
+        </div>
 
         {submitted ? <Story
           passage={passage}
