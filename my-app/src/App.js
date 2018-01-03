@@ -1,56 +1,7 @@
-import React, { Component } from 'react';
-// import logo from './logo.svg';
-// import './App.css';
-import passages from './passages.json';
-// import Form from './Form';
-// import Story from './Story';
-
-class Form extends Component {
-  render() {
-    const { order, handleForm, handleInput } = this.props
-
-    return (
-      <form onSubmit={handleForm}>
-        {order.map((word, index) => (
-          <div>
-            <input type='text' name='words' id={index} placeholder={word} onChange={handleInput} />
-            <p>{word}</p>
-          </div>
-        ))}
-      </form>
-    )
-  }
-}
-
-
-class Story extends Component {
-  capitalize = str => {
-    return str.replace(/\w/, letter => letter.toUpperCase())
-  }
-
-  // I gave up on adding styling tags to the substituted words 
-  makeStory = (passage, words) => {
-    let story = passage
-    let pattern = /\[[^\]]*\]/
-
-    for (let i = 0; i < words.length; i++) {
-      story = story.replace(pattern, words[i])
-    }
-
-    return this.capitalize(story)
-  }
-
-  render() {
-    const { passage, wordcount, words } = this.props
-    this.makeStory(passage, words)
-
-    return (
-      <div>
-        <p>{this.makeStory(passage, words)}</p>
-      </div>
-    )
-  }
-}
+import React, { Component } from 'react'
+import passages from './passages.json'
+import Form from './Form'
+import Story from './Story'
 
 class App extends Component {
   constructor() {
@@ -107,7 +58,7 @@ class App extends Component {
 
   // when user clicks 'Madify'
   handleSubmitButton = event => {
-    const { passage, wordsNeeded, order, words, story, submitted } = this.state 
+    const { passage, wordsNeeded, order, words, story, submitted } = this.state
 
     const hasWords = words.filter(word => word)
 
@@ -125,7 +76,13 @@ class App extends Component {
   // and re-rendering the empty form 
   // when user clicks 'Another one'
   handleAnotherButton = event => {
-    // 
+    this.setState({
+      words: [],
+      submitted: false
+    })
+
+    this.componentDidMount()
+
   }
 
   // tracks changes in form text input and adds to state 
@@ -147,7 +104,9 @@ class App extends Component {
     return (
       <div>
         <h1>Madify</h1>
-        <Form order={order}
+        <Form
+          words={words}
+          order={order}
           handleForm={this.handleFormSubmit}
           handleInput={this.handleInputChange} />
 
