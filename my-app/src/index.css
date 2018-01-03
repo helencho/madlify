@@ -1,6 +1,145 @@
-body {
+@import url('https://fonts.googleapis.com/css?family=Leckerli+One|Patua+One');
+
+
+html, body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  font-size: 10px;
 }
 
+body {
+  /* CHANGES color on every load or "another one" button click */
+  background-color: rgb(51, 204, 255);
+}
+
+
+/*---------- Main body style guidelines ----------*/
+.container {
+  height: 100%; 
+  /* CHANGES color on every load or "another one" button click */
+  background-color: rgb(51, 204, 255);
+}
+
+h1 {
+  /* background-color: yellow; */
+  margin: 0 auto;
+  padding: 0.6rem 0;
+  width: 500px;
+  text-align: center;
+  font-family: 'Leckerli One', cursive;
+  font-size: 8.6rem;
+  color: white;
+}
+
+.main {
+  /* background-color: red; */
+  margin: 1rem auto;
+  padding: 2.2rem 0;
+  width: 500px;
+  text-align: center;
+}
+
+.main-story {
+  /* background-color: salmon; */
+  margin: 1rem auto;
+  padding: 1rem 0;
+  text-align: justify;
+  width: 75%;
+  font-family: 'Patua One', cursive;
+  font-size: 2.2rem;
+}
+
+
+/*---------- Form style guidelines ----------*/
+.main-form {
+  /* background-color: palevioletred; */
+}
+
+.single-input-div {
+  /* background-color: skyblue; */
+  margin: 1rem auto;
+  padding: 1rem 0;
+  width: 75%;
+}
+
+input {
+  outline: none;
+  transition: 0.3s all;
+  font-family: 'Patua One', cursive;
+  border: none;
+  border-radius: 0.3rem;
+  padding: 1.2rem;
+  font-size: 2.2rem;
+  width: 220px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+input::placeholder {
+  color: rgb(200, 200, 200);
+}
+
+input:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 1.0);
+  /* padding: 3rem; */
+}
+
+
+/*---------- Button style guidelines ----------*/
+.button-bottom-div,
+.button-top-div {
+  /* background-color: green; */
+  width: 75%;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+button {
+  outline: none;
+  transition: 0.3s all;
+  font-family: 'Patua One', cursive;  
+  border: 1.5px white solid;
+  border-radius: 0.3rem;
+  padding: 1.2rem;
+  font-size: 2.2rem;
+  width: 244px;
+  background-color: rgba(255, 255, 255, 0);
+  /* color: rgb(51, 102, 204); */
+  color: white;
+}
+
+button:hover {
+  background-color: white;
+  color: rgb(51, 204, 255);
+}
+
+
+/*---------- Responsive design style guidelines ----------*/
+@media screen and (max-width: 581px) {
+  .container {
+    background-color: greenyellow;
+  }
+
+  h1 {
+    width: 400px;
+  }
+
+  .main {
+    width: 400px;
+  }
+}
+
+
+
+/*---------- Color Schemes ----------*/
+/*
+rgb(51, 153, 255) => blue 
+rgb(51, 204, 255) => bright blue
+rgb(51, 255, 204) => bright aqua blue 
+rgb(255, 204, 102) => light bright orange
+rgb(255, 204, 51) => bright yellow 
+rgb(255, 102, 102) => pink 
+rgb(102, 102, 255) => dark periwinkle 
+rgb(255, 102, 204) => bright pink (bubblegum)
+*/

@@ -19,13 +19,11 @@ class Story extends Component {
     }
 
     render() {
-        const { passage, wordcount, words } = this.props
+        const { passage, words } = this.props
         this.makeStory(passage, words)
 
         return (
-            <div>
-                <p>{this.makeStory(passage, words)}</p>
-            </div>
+            <p>{this.makeStory(passage, words)}</p>
         )
     }
 }

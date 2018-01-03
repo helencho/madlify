@@ -102,24 +102,38 @@ class App extends Component {
     console.log(this.state)
 
     return (
-      <div>
+      <div className='container'>
         <h1>Madify</h1>
-        <Form
-          words={words}
-          order={order}
-          handleForm={this.handleFormSubmit}
-          handleInput={this.handleInputChange} />
 
-        <div>
-          <button onClick={this.handleSubmitButton}>Madify</button>
-          <button onClick={this.handleAnotherButton}>Another one</button>
+        {submitted ?
+          <div className='main'>
+            <div className='main-story'>
+              <Story
+                passage={passage}
+                words={words} />
+            </div>
+            <div className='button-bottom-div'>
+              <button onClick={this.handleAnotherButton}>Another one</button>
+            </div>
+          </div>
+          :
+          <div className='main'>
+            <div className='button-top-div'>
+              <button onClick={this.handleAnotherButton}>Another one</button>
+            </div>
+            
+            <div className='main-form'>
+              <Form
+                words={words}
+                order={order}
+                handleForm={this.handleFormSubmit}
+                handleInput={this.handleInputChange} />
+            </div>
 
-        </div>
-
-        {submitted ? <Story
-          passage={passage}
-          wordcount={wordsNeeded}
-          words={words} /> : ''}
+            <div className='button-bottom-div'>
+              <button onClick={this.handleSubmitButton}>Madify</button>
+            </div>
+          </div>}
 
       </div>
     );
