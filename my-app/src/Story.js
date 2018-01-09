@@ -6,10 +6,10 @@ class Story extends Component {
         return str.replace(/\w/, letter => letter.toUpperCase())
     }
 
-    // I gave up on adding styling tags to the substituted words 
+    // replaces blanks in passages with the words user input 
     makeStory = (passage, words) => {
         let story = passage
-        let pattern = /\[[^\]]*\]/
+        let pattern = /\[[^\]]*\]/ // finds the first instance of [...]
 
         for (let i = 0; i < words.length; i++) {
             story = story.replace(pattern, words[i])

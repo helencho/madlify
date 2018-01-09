@@ -71,18 +71,13 @@ class App extends Component {
     }
   }
 
-  // HERE!! 
-  // working on randomly choosing another passage 
-  // and re-rendering the empty form 
-  // when user clicks 'Another one'
+  // re-render an empty form when user clicks "another one" 
   handleAnotherButton = event => {
     this.setState({
       words: [],
       submitted: false
     })
-
     this.componentDidMount()
-
   }
 
   // tracks changes in form text input and adds to state 

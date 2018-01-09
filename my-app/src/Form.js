@@ -13,7 +13,6 @@ class Form extends Component {
                             id={index} placeholder={word}
                             onChange={handleInput}
                             value={words[index] || ''} />
-                        {/* <p>{word}</p> */}
                     </div>
                 ))}
             </form>

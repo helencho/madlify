@@ -10,5 +10,25 @@
     {
         "passage": "This <holiday>, <name-female> plans to visit her <family-member> in <city>. Last year, she drove <number> miles in her <car-brand>. This year, she is taking the <transportation>.",
         "wordsNeeded": 7
+    },
+    {
+        "passage": "Mary went to the <place> to get some <noun>. On the way, she encountered a big <noun> and <verb> to her <noun>.",
+        "wordsNeeded": 5
+    },
+    {
+        "passage": "Type <adjective>er.",
+        "wordsNeeded": 1
+    },
+    {
+        "passage": "Once upon a time, there was a girl named <name-female>. She loved <noun-plural>, as much as the sun <verb-past-tense> the moon.",
+        "wordsNeeded": 3
+    },
+    {
+        "passage": "Dear Mrs. <name-female>, <name-male> is very sick with <illness> today. He must <verb> at home and eat lots of <food>. Hopefully he will be <adjective> tomorrow! Sincerely, His <family-member>",
+        "wordsNeeded": 7
+    },
+    {
+        "passage": "The <animal> <verb-past-tense> my homework.",
+        "wordsNeeded": 2
     }
 ]
