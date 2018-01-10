@@ -37,9 +37,9 @@ npm test
 
 Open http://localhost:3000 to view the word game in the browser.
 
-[Demo gif]
+![Using Madify](./public/screenvid1.gif)
 
-[Demo gif]
+![Using Madify](./public/screenvid2.gif)
 
 
 ## Built With
