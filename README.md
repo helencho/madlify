@@ -59,3 +59,7 @@ Open http://localhost:3000 to view the word game in the browser.
 * Show user the definition of chosen part of speech 
 * Responsive for mobile and web 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8f89f09b675ce2a0a02b0335255a3eca5c6112fe
