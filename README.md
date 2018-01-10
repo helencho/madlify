@@ -2,7 +2,7 @@
 
 Your favorite childhood game of [MadLibs](https://en.wikipedia.org/wiki/Mad_Libs), now in cooler colors and on the web. Fill in the blanks with corresponding parts of speech and watch the story unfold. 
 
-[Example screenshot] 
+![Image of Madify](./public/screen1.png)
 
 
 ## Getting Started
@@ -22,7 +22,6 @@ npm init
 
 ```
 npm install
-cd my-app
 ```
 
 To run app on development mode:
