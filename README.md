@@ -12,7 +12,7 @@ Follow these instructions to get a copy of the project running on your local mac
 
 ### Prerequisities
 
-Fork the repo. Go into terminal and navigate to the root folder. Initialize npm:
+Clone the repo. Go into terminal and navigate to the root folder. Initialize npm:
 
 ```
 npm init
