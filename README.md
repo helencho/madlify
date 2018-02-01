@@ -53,8 +53,8 @@ Open http://localhost:3000 to view the word game in the browser.
 
 
 ## To do
-* Utilize [Madlibz API](https://madlibz.herokuapp.com/api) to get stories 
-* Alternate colors on load 
+* ~~Utilize [Madlibz API](https://madlibz.herokuapp.com/api) to get stories~~ Expand on my own API
+* ~~Alternate colors on load~~
 * Show user the definition of chosen part of speech 
 * Responsive for mobile and web 
 

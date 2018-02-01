@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import passages from './passages.json'
 import Form from './Form'
 import Story from './Story'
+import colors from './colors'
+
 
 class App extends Component {
   constructor() {
@@ -18,26 +20,42 @@ class App extends Component {
 
   componentDidMount = () => {
     this.getOrder()
+
+    // Set background color 
+    document.body.style.backgroundColor = this.getBackgroundColor();
   }
 
-  // grabs random passage from the passages file 
+  // Grab random passages from passage file 
   grabRandomPassage = () => {
     let i = Math.floor(Math.random() * passages.length)
     return passages[i]
   }
 
-  // takes passages and extracts: order of words while replacing those words with the order index 
+  // Grab a new background color from colors file 
+  getBackgroundColor = () => {
+    let i = Math.floor(Math.random() * 8)
+    let color = colors[i]
+    return color 
+  }
+
+  // Take passage and extract: 
+  // (1) Order of words 
+  // (2) Replace those words with order index number 
   getOrder = () => {
-    let random = this.grabRandomPassage() // grabs random passage object (passages, wordsNeeded)
+
+    // Grab random passage object { passages, wordsNeeded }
+    let random = this.grabRandomPassage() 
     let randomPassage = random.passage
     let wordsNeeded = random.wordsNeeded
-    let pattern = /<[^>]*>/  // this finds the first instance of <...>   
+
+    // Find the first instance of < ... > 
+    let pattern = /<[^>]*>/ 
     let orderArray = []
 
     for (let i = 0; i < wordsNeeded; i++) {
-      let foundWord = randomPassage.match(pattern)[0] // <exclaim> 
-      let orderWord = foundWord.split('').splice(1, foundWord.length - 2).join('') // exclaim 
-      randomPassage = randomPassage.replace(pattern, `[${i}]`) // $0 she said... 
+      let foundWord = randomPassage.match(pattern)[0] // Ex. <exclaim> 
+      let orderWord = foundWord.split('').splice(1, foundWord.length - 2).join('') // Ex. exclaim 
+      randomPassage = randomPassage.replace(pattern, `[${i}]`) // Ex. $0 she said... 
       orderArray.push(orderWord)
     }
 
@@ -48,7 +66,7 @@ class App extends Component {
     })
   }
 
-  // prevents page reload when form is submitted 
+  // Prevent page from reloading when using presses "Return" 
   handleFormSubmit = event => {
     event.preventDefault()
     this.setState({
@@ -56,9 +74,9 @@ class App extends Component {
     })
   }
 
-  // when user clicks 'Madify'
+  // When user clicks Madify button 
   handleSubmitButton = event => {
-    const { passage, wordsNeeded, order, words, story, submitted } = this.state
+    const { wordsNeeded, words } = this.state
 
     const hasWords = words.filter(word => word)
 
@@ -71,7 +89,7 @@ class App extends Component {
     }
   }
 
-  // re-render an empty form when user clicks "another one" 
+  // When user clicks Another One button, re-render an empty form 
   handleAnotherButton = event => {
     this.setState({
       words: [],
@@ -80,7 +98,7 @@ class App extends Component {
     this.componentDidMount()
   }
 
-  // tracks changes in form text input and adds to state 
+  // Track input changes and add to state 
   handleInputChange = event => {
     let newWords = this.state.words
     let i = parseInt(event.target.id)
@@ -92,7 +110,7 @@ class App extends Component {
   }
 
   render() {
-    const { passage, wordsNeeded, order, words, story, submitted } = this.state
+    const { passage, order, words, submitted } = this.state
 
     console.log(this.state)
 
@@ -116,7 +134,7 @@ class App extends Component {
             <div className='button-top-div'>
               <button onClick={this.handleAnotherButton}>Another one</button>
             </div>
-            
+
             <div className='main-form'>
               <Form
                 words={words}

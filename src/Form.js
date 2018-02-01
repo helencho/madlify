@@ -7,7 +7,7 @@ class Form extends Component {
         return (
             <form onSubmit={handleForm}>
                 {order.map((word, index) => (
-                    <div className='single-input-div'>
+                    <div className='single-input-div' key={index}>
                         <input
                             type='text' name='words'
                             id={index} placeholder={word}

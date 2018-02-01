@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Leckerli+One|Patua+One');
 
-
 html, body {
   margin: 0;
   padding: 0;
@@ -18,7 +17,7 @@ body {
 .container {
   height: 100%; 
   /* CHANGES color on every load or "another one" button click */
-  background-color: rgb(51, 204, 255);
+  /* background-color: rgb(51, 204, 255); */
 }
 
 h1 {
@@ -77,6 +76,7 @@ input {
 
 input::placeholder {
   color: rgb(200, 200, 200);
+  /* color: black; */
 }
 
 input:focus {
@@ -117,10 +117,6 @@ button:hover {
 
 /*---------- Responsive design style guidelines ----------*/
 @media screen and (max-width: 581px) {
-  .container {
-    background-color: greenyellow;
-  }
-
   h1 {
     width: 400px;
   }
@@ -132,7 +128,7 @@ button:hover {
 
 
 
-/*---------- Color Schemes ----------*/
+/*---------- Color Themes ----------*/
 /*
 rgb(51, 153, 255) => blue 
 rgb(51, 204, 255) => bright blue

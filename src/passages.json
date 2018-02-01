@@ -24,11 +24,15 @@
         "wordsNeeded": 3
     },
     {
-        "passage": "Dear Mrs. <name-female>, <name-male> is very sick with <illness> today. He must <verb> at home and eat lots of <food>. Hopefully he will be <adjective> tomorrow! Sincerely, His <family-member>",
+        "passage": "Dear Mrs. <name-female>, <name-male> is very sick with <illness> today. He must <verb-present-tense> at home and eat lots of <favorite-snack>. Hopefully he will be <adjective> tomorrow! Sincerely, His <family-member>",
         "wordsNeeded": 7
     },
     {
         "passage": "The <animal> <verb-past-tense> my homework.",
         "wordsNeeded": 2
+    },
+    {
+        "passage": "Hello <noun>!",
+        "wordsNeeded": 1
     }
 ]
