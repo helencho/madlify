@@ -1,5 +1,12 @@
+/*---------------------------------------------------------------//
+//                            Fonts                              //
+//---------------------------------------------------------------*/
 @import url('https://fonts.googleapis.com/css?family=Leckerli+One|Patua+One');
 
+
+/*---------------------------------------------------------------//
+//                       Main Body Styles                        //
+//---------------------------------------------------------------*/
 html, body {
   margin: 0;
   padding: 0;
@@ -12,16 +19,11 @@ body {
   background-color: rgb(51, 204, 255);
 }
 
-
-/*---------- Main body style guidelines ----------*/
 .container {
   height: 100%; 
-  /* CHANGES color on every load or "another one" button click */
-  /* background-color: rgb(51, 204, 255); */
 }
 
 h1 {
-  /* background-color: yellow; */
   margin: 0 auto;
   padding: 0.6rem 0;
   width: 500px;
@@ -32,15 +34,17 @@ h1 {
 }
 
 .main {
-  /* background-color: red; */
   margin: 1rem auto;
   padding: 2.2rem 0;
   width: 500px;
   text-align: center;
 }
 
+
+/*---------------------------------------------------------------//
+//                          Main Story                           //
+//---------------------------------------------------------------*/
 .main-story {
-  /* background-color: salmon; */
   margin: 1rem auto;
   padding: 1rem 0;
   text-align: justify;
@@ -50,13 +54,14 @@ h1 {
 }
 
 
-/*---------- Form style guidelines ----------*/
-.main-form {
-  /* background-color: palevioletred; */
-}
+/*---------------------------------------------------------------//
+//                            Main Form                          //
+//---------------------------------------------------------------*/
+/* .main-form {
+  background-color: palevioletred;
+} */
 
 .single-input-div {
-  /* background-color: skyblue; */
   margin: 1rem auto;
   padding: 1rem 0;
   width: 75%;
@@ -76,20 +81,19 @@ input {
 
 input::placeholder {
   color: rgb(200, 200, 200);
-  /* color: black; */
 }
 
 input:focus {
   outline: none;
   background-color: rgba(255, 255, 255, 1.0);
-  /* padding: 3rem; */
 }
 
 
-/*---------- Button style guidelines ----------*/
+/*---------------------------------------------------------------//
+//                            Buttons                            //
+//---------------------------------------------------------------*/
 .button-bottom-div,
 .button-top-div {
-  /* background-color: green; */
   width: 75%;
   margin: 0 auto;
   padding: 1rem 0;
@@ -105,7 +109,6 @@ button {
   font-size: 2.2rem;
   width: 244px;
   background-color: rgba(255, 255, 255, 0);
-  /* color: rgb(51, 102, 204); */
   color: white;
 }
 
@@ -115,7 +118,9 @@ button:hover {
 }
 
 
-/*---------- Responsive design style guidelines ----------*/
+/*---------------------------------------------------------------//
+//                       Responsiveness                          //
+//---------------------------------------------------------------*/
 @media screen and (max-width: 581px) {
   h1 {
     width: 400px;
@@ -127,9 +132,9 @@ button:hover {
 }
 
 
-
-/*---------- Color Themes ----------*/
-/*
+/*---------------------------------------------------------------//
+//                          Color Themes                         //
+//---------------------------------------------------------------*//*
 rgb(51, 153, 255) => blue 
 rgb(51, 204, 255) => bright blue
 rgb(51, 255, 204) => bright aqua blue 

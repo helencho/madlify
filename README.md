@@ -57,4 +57,5 @@ Open http://localhost:3000 to view the word game in the browser.
 * ~~Alternate colors on load~~
 * Show user the definition of chosen part of speech 
 * Responsive for mobile and web 
+* Add button to my Github 
 

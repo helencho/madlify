@@ -4,11 +4,11 @@
         "wordsNeeded": 4
     },
     {
-        "passage": "<name-male> was a <adjective> boy. I met him when he and his <adjective> sister <name> were taking a walk. I said, '<greeting>! I like your <noun>!' You just smiled and <verb-past-tense>.",
+        "passage": "<name-male> was a <adjective> boy. I met him when he and his <adjective> sister <name> were taking a walk. I said, '<greeting>! I like your <noun>!' You just smiled and <verb-past>.",
         "wordsNeeded": 7
     },
     {
-        "passage": "This <holiday>, <name-female> plans to visit her <family-member> in <city>. Last year, she drove <number> miles in her <car-brand>. This year, she is taking the <transportation>.",
+        "passage": "This <holiday>, <name-female> plans to visit her <family-member> in <city>. Last year, she drove <number> miles in her <car-brand>. This year, she is taking the <mode-of-transportation>.",
         "wordsNeeded": 7
     },
     {
@@ -20,15 +20,15 @@
         "wordsNeeded": 1
     },
     {
-        "passage": "Once upon a time, there was a girl named <name-female>. She loved <noun-plural>, as much as the sun <verb-past-tense> the moon.",
+        "passage": "Once upon a time, there was a girl named <name-female>. She loved <noun-plural>, as much as the sun <verb-past> the moon.",
         "wordsNeeded": 3
     },
     {
-        "passage": "Dear Mrs. <name-female>, <name-male> is very sick with <illness> today. He must <verb-present-tense> at home and eat lots of <favorite-snack>. Hopefully he will be <adjective> tomorrow! Sincerely, His <family-member>",
+        "passage": "Dear Mrs. <name-female>, <name-male> is very sick with <illness> today. He must <verb-present> at home and eat lots of <favorite-snack>. Hopefully he will be <adjective> tomorrow! Sincerely, His <family-member>",
         "wordsNeeded": 7
     },
     {
-        "passage": "The <animal> <verb-past-tense> my homework.",
+        "passage": "Mrs.Klatch, my <animal> <verb-past> my homework!",
         "wordsNeeded": 2
     },
     {

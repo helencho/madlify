@@ -3,6 +3,7 @@ import passages from './passages.json'
 import Form from './Form'
 import Story from './Story'
 import colors from './colors'
+import definitions from './definitions' 
 
 
 class App extends Component {
@@ -109,6 +110,14 @@ class App extends Component {
     })
   }
 
+  // When use hovers over text inputs, display a definition and example of the part of speech 
+  handleMouseOver = event => {
+    let speech = event.target.placeholder 
+    let definition = definitions[speech].definition
+    let examples = definitions[speech].examples 
+    console.log(`${speech} example: ${examples}`)
+  }
+
   render() {
     const { passage, order, words, submitted } = this.state
 
@@ -140,7 +149,8 @@ class App extends Component {
                 words={words}
                 order={order}
                 handleForm={this.handleFormSubmit}
-                handleInput={this.handleInputChange} />
+                handleInput={this.handleInputChange}
+                handleMouseOver={this.handleMouseOver} />
             </div>
 
             <div className='button-bottom-div'>

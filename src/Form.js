@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 class Form extends Component {
     render() {
-        const { words, order, handleForm, handleInput } = this.props
+        const { words, order, handleForm, handleInput, handleMouseOver } = this.props
 
         return (
             <form onSubmit={handleForm}>
@@ -12,6 +12,7 @@ class Form extends Component {
                             type='text' name='words'
                             id={index} placeholder={word}
                             onChange={handleInput}
+                            onMouseOver={handleMouseOver}
                             value={words[index] || ''} />
                     </div>
                 ))}
