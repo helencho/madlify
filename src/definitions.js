@@ -3,6 +3,14 @@ const definitions = {
         definition: 'this',
         examples: 'dog, cat, goat, lion'
     },
+    'holiday': {
+        definition: 'this',
+        examples: 'Thanksgiving'
+    },
+    'car-brand': {
+        definition: 'this',
+        examples: 'Chevrolet'
+    },
     'exclamation': {
         definition: 'this',
         examples: 'hey!'
@@ -70,6 +78,10 @@ const definitions = {
     'city': {
         definition: 'this',
         examples: 'Seattle'
+    },
+    'number': {
+        definition: 'this',
+        examples: '999'
     },
 }
 
