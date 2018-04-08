@@ -113,7 +113,6 @@ class App extends Component {
   // When use hovers over text inputs, display a definition and example of the part of speech 
   handleMouseOver = event => {
     let speech = event.target.placeholder 
-    // let definition = definitions[speech].definition 
     let examples = definitions[speech].examples 
     console.log(`${speech} example: ${examples}`)
   }
@@ -125,7 +124,7 @@ class App extends Component {
 
     return (
       <div className='container'>
-        <h1>Madify</h1>
+        <h1>Madlify</h1>
 
         {submitted ?
           <div className='main'>
