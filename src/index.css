@@ -14,13 +14,20 @@ html, body {
   font-size: 10px;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   /* CHANGES color on every load or "another one" button click */
   background-color: rgb(51, 204, 255);
 }
 
 .container {
-  height: 100%; 
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
@@ -57,10 +64,6 @@ h1 {
 /*---------------------------------------------------------------//
 //                            Main Form                          //
 //---------------------------------------------------------------*/
-/* .main-form {
-  background-color: palevioletred;
-} */
-
 .single-input-div {
   margin: 1rem auto;
   padding: 1rem 0;
@@ -101,21 +104,41 @@ input:focus {
 
 button {
   outline: none;
-  transition: 0.3s all;
-  font-family: 'Patua One', cursive;  
   border: 1.5px white solid;
   border-radius: 0.3rem;
   padding: 1.2rem;
+  font-family: 'Patua One', cursive;  
   font-size: 2.2rem;
   width: 244px;
   background-color: rgba(255, 255, 255, 0);
   color: white;
+  -moz-transition: 0.3s all;
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
 }
 
 button:hover {
   background-color: white;
   color: rgb(51, 204, 255);
 }
+
+/*---------------------------------------------------------------//
+//                         Github Logo                           //
+//---------------------------------------------------------------*/
+.logo-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 2.2rem 0;
+}
+
+.logo-container a, 
+.logo-container a:visited {
+  text-decoration: none;
+  color: white;
+}
+
 
 
 /*---------------------------------------------------------------//

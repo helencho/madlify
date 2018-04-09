@@ -3,7 +3,7 @@ import passages from './passages.json'
 import Form from './Form'
 import Story from './Story'
 import colors from './colors'
-import definitions from './definitions' 
+import definitions from './definitions'
 
 
 class App extends Component {
@@ -36,7 +36,7 @@ class App extends Component {
   getBackgroundColor = () => {
     let i = Math.floor(Math.random() * 8)
     let color = colors[i]
-    return color 
+    return color
   }
 
   // Take passage and extract: 
@@ -45,12 +45,12 @@ class App extends Component {
   getOrder = () => {
 
     // Grab random passage object { passages, wordsNeeded }
-    let random = this.grabRandomPassage() 
+    let random = this.grabRandomPassage()
     let randomPassage = random.passage
     let wordsNeeded = random.wordsNeeded
 
     // Find the first instance of < ... > 
-    let pattern = /<[^>]*>/ 
+    let pattern = /<[^>]*>/
     let orderArray = []
 
     for (let i = 0; i < wordsNeeded; i++) {
@@ -112,51 +112,56 @@ class App extends Component {
 
   // When use hovers over text inputs, display a definition and example of the part of speech 
   handleMouseOver = event => {
-    let speech = event.target.placeholder 
-    let examples = definitions[speech].examples 
+    let speech = event.target.placeholder
+    let examples = definitions[speech].examples
     console.log(`${speech} example: ${examples}`)
   }
 
   render() {
     const { passage, order, words, submitted } = this.state
 
-    console.log(this.state)
+    const story = (
+      <div className='main'>
+        <div className='main-story'>
+          <Story
+            passage={passage}
+            words={words} />
+        </div>
+        <div className='button-bottom-div'>
+          <button onClick={this.handleAnotherButton}>Another one</button>
+        </div>
+      </div>
+    )
+
+    const form = (
+      <div className='main'>
+        <div className='button-top-div'>
+          <button onClick={this.handleAnotherButton}>Another one</button>
+        </div>
+
+        <div className='main-form'>
+          <Form
+            words={words}
+            order={order}
+            handleForm={this.handleFormSubmit}
+            handleInput={this.handleInputChange}
+          // handleMouseOver={this.handleMouseOver}
+          />
+        </div>
+
+        <div className='button-bottom-div'>
+          <button onClick={this.handleSubmitButton}>Madify</button>
+        </div>
+      </div>
+    )
 
     return (
       <div className='container'>
         <h1>Madlify</h1>
-
-        {submitted ?
-          <div className='main'>
-            <div className='main-story'>
-              <Story
-                passage={passage}
-                words={words} />
-            </div>
-            <div className='button-bottom-div'>
-              <button onClick={this.handleAnotherButton}>Another one</button>
-            </div>
-          </div>
-          :
-          <div className='main'>
-            <div className='button-top-div'>
-              <button onClick={this.handleAnotherButton}>Another one</button>
-            </div>
-
-            <div className='main-form'>
-              <Form
-                words={words}
-                order={order}
-                handleForm={this.handleFormSubmit}
-                handleInput={this.handleInputChange}
-                handleMouseOver={this.handleMouseOver} />
-            </div>
-
-            <div className='button-bottom-div'>
-              <button onClick={this.handleSubmitButton}>Madify</button>
-            </div>
-          </div>}
-
+        {submitted ? story : form}
+        <div className='logo-container'>
+          <a href='https://github.com/helencho/madlify' target='_blank'><i class="fab fa-github fa-5x"></i></a>
+        </div>
       </div>
     );
   }
