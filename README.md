@@ -13,7 +13,7 @@ Fill in the list of words
 
 Watch a story unfold before your eyes 
 
-![Using Madlify](./public/madlify-submit.gif)
+![Using Madlify](./public/madlify-story.png)
 
 
 ## Built With
