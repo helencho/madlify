@@ -150,7 +150,7 @@ class App extends Component {
         </div>
 
         <div className='button-bottom-div'>
-          <button onClick={this.handleSubmitButton}>Madify</button>
+          <button onClick={this.handleSubmitButton}>Madlify</button>
         </div>
       </div>
     )
