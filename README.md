@@ -1,43 +1,17 @@
-# Madify
+# Madlify
 
-Your favorite childhood game of [MadLibs](https://en.wikipedia.org/wiki/Mad_Libs), now in cooler colors and on the web. Fill in the blanks with corresponding parts of speech and watch the story unfold. 
+Your favorite childhood game of [MadLibs](https://en.wikipedia.org/wiki/Mad_Libs), now in cooler colors and on the web. Madlify is a phrasal template word game, where you fill in the blanks with parts of speech.
 
 ![Image of Madify](./public/screen1.png)
 
+## Features 
 
-## Getting Started
-
-Follow these instructions to get a copy of the project running on your local machine for development and testing purposes.
-
-
-### Prerequisities
-
-Clone the repo. Go into terminal and navigate to the root folder. Initialize npm:
-
-```
-npm init
-```
-
-### Installing
-
-```
-npm install
-```
-
-To run app on development mode:
-
-```
-npm start
-```
-
-To run on test mode: 
-``` 
-npm test 
-``` 
-
-Open http://localhost:3000 to view the word game in the browser.
+Fill in the list of words 
 
 ![Using Madify](./public/screenvid1.gif)
+
+
+Watch a story unfold before your eyes 
 
 ![Using Madify](./public/screenvid2.gif)
 
@@ -53,9 +27,10 @@ Open http://localhost:3000 to view the word game in the browser.
 
 
 ## To do
-* ~~Utilize [Madlibz API](https://madlibz.herokuapp.com/api) to get stories~~ Expand on my own API
-* ~~Alternate colors on load~~
-* Show user the definition of chosen part of speech 
-* Responsive for mobile and web 
-* Add button to my Github 
+- [x] ~~Utilize [Madlibz API](https://madlibz.herokuapp.com/api) to get stories~~ 
+- [ ] Expand on my own stories API
+- [x] Alternate colors on load
+- [ ] Show user the definition of chosen part of speech 
+- [x] Responsive for mobile and web 
+- [x] Add button to my Github 
 
