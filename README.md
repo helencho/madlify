@@ -2,7 +2,7 @@
 
 Your favorite childhood game of [MadLibs](https://en.wikipedia.org/wiki/Mad_Libs), now in cooler colors and on the web. Madlify is a phrasal template word game, where you fill in the blanks with parts of speech.
 
-![Madlify home](./public/madlify-home.png)
+![Madlify home](./public/madlify.png)
 
 ## Features 
 
